@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CRLr9CbarDzttQWm8RyBce8w/T0Qp9renL7mWEoWqUA=",
+  "Source": "WebhookCamAi",
+  "BasePath": "_content/WebhookCamAi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
