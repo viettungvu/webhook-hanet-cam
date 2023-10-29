@@ -11,13 +11,13 @@ namespace WebhookCamAi
     {
         private readonly ApplicationDbContext _context;
         private readonly IConfiguration _configuration;
-        //private readonly FallbackDbContext _fallbackContext;
+        private readonly FallbackDbContext _fallbackContext;
 
         public ReceiveWebhook(ApplicationDbContext mainContext, FallbackDbContext fallbackDbContext, IConfiguration configuration)
         {
             _configuration = configuration;
             _context = mainContext;
-            //_fallbackContext = fallbackDbContext;
+            _fallbackContext = fallbackDbContext;
         }
 
         public async Task<string> Request(string requestBody)
@@ -48,27 +48,27 @@ namespace WebhookCamAi
                             try
                             {
                                 //if insert failed=> stored data to file for services excute later
-                                //_fallbackContext.CheckinData.Add(new CheckinFail()
-                                //{
-                                //    id = Guid.NewGuid().ToString(),
-                                //    deviceName = data.deviceName,
-                                //    aliasID = data.aliasID,
-                                //    date = data.date,
-                                //    errorCount = 0,
-                                //    status = TrangThai.ERROR,
-                                //});
-                                //_fallbackContext.SaveChanges();
-                                Task t = Task.Run(() =>
-                                 {
-                                     var obj = new
-                                     {
-                                         aliasID = data.aliasID,
-                                         date = data.date,
-                                         deviceName = data.deviceName
-                                     };
-                                     string fileName = string.Format("{0}_{1}.txt", data.aliasID, data.date.ToString("yyyyMMdd"));
-                                     writeToFile(fileName, obj);
-                                 });
+                                _fallbackContext.CheckinData.Add(new CheckinFail()
+                                {
+                                    id = Guid.NewGuid().ToString(),
+                                    deviceName = data.deviceName,
+                                    aliasID = data.aliasID,
+                                    date = data.date,
+                                    errorCount = 0,
+                                    status = TrangThai.ERROR,
+                                });
+                                _fallbackContext.SaveChanges();
+                                //Task t = Task.Run(() =>
+                                // {
+                                //     var obj = new
+                                //     {
+                                //         aliasID = data.aliasID,
+                                //         date = data.date,
+                                //         deviceName = data.deviceName
+                                //     };
+                                //     string fileName = string.Format("{0}_{1}.txt", data.aliasID, data.date.ToString("yyyyMMdd"));
+                                //     writeToFile(fileName, obj);
+                                // });
                             }
                             catch (Exception)
                             {

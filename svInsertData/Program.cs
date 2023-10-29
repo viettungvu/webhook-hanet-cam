@@ -2,43 +2,58 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using svInsertData;
 using svInsertData.Models;
+using Serilog;
 
-IHost host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices((context, services) =>
-    {
-        IConfiguration configuration = context.Configuration;
-        var optionsBuilder = new DbContextOptionsBuilder<FallbackDbContext>();
-
-        optionsBuilder.UseSqlite(configuration.GetConnectionString("Sqlite"));
-        services.AddScoped<FallbackDbContext>(db => new FallbackDbContext(optionsBuilder.Options));
-
-
-        var optionsBoptuilder = new DbContextOptionsBuilder<FallbackDbContext>();
-
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("DbHRM"));
-        services.AddScoped<FallbackDbContext>(db => new FallbackDbContext(optionsBuilder.Options));
-
-        services.AddHostedService<Worker>();
-    })
-    .Build();
-
-
-CreateDbIfNoneExist(host);
-
-await host.RunAsync();
-void CreateDbIfNoneExist(IHost host)
+internal class Program
 {
-    using (var scope = host.Services.CreateScope())
+    static void CreateDbIfNoneExist(IHost host)
     {
-        var service = scope.ServiceProvider;
+        using (var scope = host.Services.CreateScope())
+        {
+            var service = scope.ServiceProvider;
+            try
+            {
+                var context = service.GetRequiredService<SqliteDbContext>();
+                context.Database.EnsureCreated();
+            }
+            catch (Exception)
+            {
+            }
+        }
+    }
+    private static async Task Main(string[] args)
+    {
+        IHost host = Host.CreateDefaultBuilder(args)
+            .UseWindowsService(opt =>
+            {
+                opt.ServiceName = ".NETServiceWebhook";
+            })
+            .UseSerilog((context, config) =>
+            {
+                string file = context.Configuration.GetValue<string>("LogFilePath");
+                if (string.IsNullOrWhiteSpace(file))
+                {
+                    file = "C:\\svLogs\\log.txt";
+                }
+                config.WriteTo.File(file, Serilog.Events.LogEventLevel.Verbose);
+            })
+            .ConfigureServices((context, services) =>
+            {
+                IConfiguration configuration = context.Configuration;
+                services.AddDbContext<SqliteDbContext>(opts =>
+                {
+                    opts.UseSqlite(configuration.GetConnectionString("Sqlite"));
+                });
+                services.AddDbContext<HRMDbContext>(opts =>
+                {
+                    opts.UseSqlServer(configuration.GetConnectionString("DbHRM"));
+                });
 
-        try
-        {
-            var context = service.GetRequiredService<FallbackDbContext>();
-            context.Database.EnsureCreated();
-        }
-        catch (Exception)
-        {
-        }
+
+                services.AddHostedService<HRMWorkerService>();
+            })
+            .Build();
+        CreateDbIfNoneExist(host);
+        await host.RunAsync();
     }
 }

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebhookCamAi", "WebhookCamA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "svInsertData", "svInsertData\svInsertData.csproj", "{8DBE1A7F-4BD4-4A45-8B13-5EA3CCD7619C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolInsertData", "ToolInsertData\ToolInsertData.csproj", "{FF102468-74BB-4D6D-8048-74AAC8B259B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolInsertData", "ToolInsertData\ToolInsertData.csproj", "{FF102468-74BB-4D6D-8048-74AAC8B259B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
