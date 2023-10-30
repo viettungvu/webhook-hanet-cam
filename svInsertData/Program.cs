@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using svInsertData;
-using svInsertData.Models;
 using Serilog;
+using Infra.EF;
 
 internal class Program
 {

@@ -1,14 +1,15 @@
+using Infra.EF;
 using Microsoft.EntityFrameworkCore;
 using WebhookCamAi;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbContext>(option => {
+builder.Services.AddDbContext<HRMDbContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DbHRM"));
 });
 
 
-builder.Services.AddDbContext<FallbackDbContext>(option => {
+builder.Services.AddDbContext<SqliteDbContext>(option => {
     option.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 });
 

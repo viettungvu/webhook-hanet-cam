@@ -1,6 +1,4 @@
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace WebhookCamAi
+namespace Infra.Models
 {
     public class CheckinData
     {
@@ -26,8 +24,8 @@ namespace WebhookCamAi
     }
     public enum TrangThai
     {
-        INSERTED=1,
-        ERROR=2,
+        INSERTED = 1,
+        ERROR = 2,
     }
 
     public class CheckinFail

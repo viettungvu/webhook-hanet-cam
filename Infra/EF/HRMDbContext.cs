@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Infra.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace svInsertData.Models
+namespace Infra.EF
 {
     public class HRMDbContext : DbContext
     {

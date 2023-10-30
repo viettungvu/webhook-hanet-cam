@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WebhookCamAi.Migrations
+namespace Infra.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitSqlite : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace WebhookCamAi.Migrations
                 {
                     id = table.Column<string>(type: "TEXT", nullable: false),
                     date = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    aliasID = table.Column<string>(type: "TEXT", nullable: true),
-                    deviceName = table.Column<string>(type: "TEXT", nullable: true),
+                    aliasID = table.Column<string>(type: "TEXT", nullable: false),
+                    deviceName = table.Column<string>(type: "TEXT", nullable: false),
                     status = table.Column<int>(type: "INTEGER", nullable: false),
                     errorCount = table.Column<int>(type: "INTEGER", nullable: false)
                 },
