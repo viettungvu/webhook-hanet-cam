@@ -1344,6 +1344,21 @@
             "rid": "win"
           }
         }
+      },
+      "Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infra.dll": {}
+        }
       }
     }
   },
@@ -3839,10 +3854,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Infra/1.0.0": {
+      "type": "project",
+      "path": "../Infra/Infra.csproj",
+      "msbuildProject": "../Infra/Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Infra >= 1.0.0",
       "Microsoft.Data.Sqlite >= 7.0.0",
       "Microsoft.Data.Sqlite.Core >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
@@ -3878,7 +3899,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj": {
+              "projectPath": "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

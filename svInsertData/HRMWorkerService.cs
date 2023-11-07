@@ -1,6 +1,6 @@
-using svInsertData.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
+using Infra.EF;
+using Infra.Models;
 
 namespace svInsertData
 {
@@ -10,8 +10,6 @@ namespace svInsertData
         private readonly IConfiguration _config;
 
         private readonly IServiceProvider _serviceProvider;
-
-
 
         public HRMWorkerService(ILogger<HRMWorkerService> logger, IConfiguration config, IServiceProvider serviceProvider)
         {
@@ -64,7 +62,9 @@ namespace svInsertData
         {
             try
             {
-                List<CheckinFail> checkInFail = sqliteDbContext.CheckinData.Where(x => x.status == TrangThai.ERROR && x.errorCount < 5).ToList();
+                int maximumError = _config.GetValue<int>("MaximumError");
+
+                List<CheckinFail> checkInFail = sqliteDbContext.CheckinData.Where(x => x.status == TrangThai.ERROR && x.errorCount < maximumError).ToList();
 
                 for (int i = 0; i < checkInFail.Count; i++)
                 {

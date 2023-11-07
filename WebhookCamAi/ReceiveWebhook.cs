@@ -4,20 +4,22 @@ using Newtonsoft.Json.Linq;
 using Microsoft.EntityFrameworkCore;
 using WebhookCamAi.Extensions;
 using Newtonsoft.Json.Bson;
+using Infra.EF;
+using Infra.Models;
 
 namespace WebhookCamAi
 {
     public class ReceiveWebhook : IReceiveWebhook
     {
-        private readonly ApplicationDbContext _context;
+        private readonly HRMDbContext _context;
         private readonly IConfiguration _configuration;
-        private readonly FallbackDbContext _fallbackContext;
+        private readonly SqliteDbContext _sqliteDbContext;
 
-        public ReceiveWebhook(ApplicationDbContext mainContext, FallbackDbContext fallbackDbContext, IConfiguration configuration)
+        public ReceiveWebhook(HRMDbContext mainContext, SqliteDbContext sqliteDbContext, IConfiguration configuration)
         {
             _configuration = configuration;
             _context = mainContext;
-            _fallbackContext = fallbackDbContext;
+            _sqliteDbContext = sqliteDbContext;
         }
 
         public async Task<string> Request(string requestBody)
@@ -48,7 +50,7 @@ namespace WebhookCamAi
                             try
                             {
                                 //if insert failed=> stored data to file for services excute later
-                                _fallbackContext.CheckinData.Add(new CheckinFail()
+                                _sqliteDbContext.CheckinData.Add(new CheckinFail()
                                 {
                                     id = Guid.NewGuid().ToString(),
                                     deviceName = data.deviceName,
@@ -57,7 +59,7 @@ namespace WebhookCamAi
                                     errorCount = 0,
                                     status = TrangThai.ERROR,
                                 });
-                                _fallbackContext.SaveChanges();
+                                _sqliteDbContext.SaveChanges();
                                 //Task t = Task.Run(() =>
                                 // {
                                 //     var obj = new
