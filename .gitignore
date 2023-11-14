@@ -10,9 +10,9 @@
 *.userosscache
 *.sln.docstates
 *.vs
-/obj
-/bin
-
+**/bin/*
+**/obj/*
+packages
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -364,3 +364,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/WebhookCam/v17/.suo
+/.vs/WebhookCam/DesignTimeBuild/.dtbcache.v2
