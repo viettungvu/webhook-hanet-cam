@@ -3874,19 +3874,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\viett\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
+      "projectUniqueName": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
       "projectName": "WebhookCamAi",
-      "projectPath": "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
-      "packagesPath": "C:\\Users\\viett\\.nuget\\packages\\",
-      "outputPath": "E:\\webhook-hanet-cam\\WebhookCamAi\\obj\\",
+      "projectPath": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\viett\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3894,14 +3899,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\webhook-hanet-cam\\Infra\\Infra.csproj": {
-              "projectPath": "E:\\webhook-hanet-cam\\Infra\\Infra.csproj"
+            "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj": {
+              "projectPath": "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj"
             }
           }
         }
@@ -3966,8 +3972,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
