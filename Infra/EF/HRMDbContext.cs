@@ -18,6 +18,11 @@ namespace Infra.EF
         public DbSet<Employee> Employees { get; set; }
         public DbSet<DepartmentEmployee> DepartmentEmployee { get; set; }
         public DbSet<IncomeEmployees> IncomeEmployess { get; set; }
+
+
+        public DbSet<ViewIncomeEmployee> ViewIncomeEmployees { get; set; }
+        public DbSet<ViewDepartmentEmployee> ViewDepartmentEmployees { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -47,6 +52,16 @@ namespace Infra.EF
             modelBuilder.Entity<IncomeEmployees>()
                 .ToTable("H1_IncomeEmployees")
                 .HasKey(x => x.IncomeEmployeesId);
+
+
+            modelBuilder.Entity<ViewIncomeEmployee>()
+                .HasNoKey()
+                .ToView("View_H1_IncomeEmployees");
+
+            modelBuilder.Entity<ViewDepartmentEmployee>()
+               .HasNoKey()
+               .ToView("View_H0_DepartmentEmployee");
+
 
         }
     }

@@ -20,7 +20,7 @@ namespace FormSendMail
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
+            Application.Run(ServiceProvider.GetRequiredService<frmIncome>());
         }
         public static IServiceProvider ServiceProvider { get; private set; }
         static IHostBuilder CreateHostBuilder()
@@ -32,7 +32,7 @@ namespace FormSendMail
                     {
                         options.UseSqlServer(context.Configuration.GetConnectionString("DbHRM"));
                     });
-                    services.AddTransient<Form1>();
+                    services.AddTransient<frmIncome>();
                 });
         }
     }
