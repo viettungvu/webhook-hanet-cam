@@ -42,6 +42,7 @@
             dgvData = new DataGridView();
             panel1 = new Panel();
             lblTotal = new Label();
+            label3 = new Label();
             tableLayoutPanel2.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -98,6 +99,7 @@
             btnSendMail.TabIndex = 5;
             btnSendMail.Text = "Send mail";
             btnSendMail.UseVisualStyleBackColor = true;
+            btnSendMail.Click += btnSendMail_Click;
             // 
             // label2
             // 
@@ -142,6 +144,7 @@
             btnTimKiem.TabIndex = 0;
             btnTimKiem.Text = "Search";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -186,6 +189,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(lblTotal);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
@@ -201,6 +205,14 @@
             lblTotal.Size = new Size(77, 20);
             lblTotal.TabIndex = 5;
             lblTotal.Text = "Tổng số: 0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(880, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 20);
+            label3.TabIndex = 6;
             // 
             // frmIncome
             // 
@@ -238,5 +250,6 @@
         private Panel panel1;
         private Label lblTotal;
         private Button btnSendMail;
+        private Label label3;
     }
 }
