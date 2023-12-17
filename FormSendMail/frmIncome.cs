@@ -17,6 +17,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using Microsoft.Extensions.Configuration;
 using System.Text.Json;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace FormSendMail
 {
@@ -127,6 +129,23 @@ namespace FormSendMail
             setDataToGrid(incomes);
         }
 
+        private IEnumerable<int> getChildDepartmentId(int parentDepartmentId = 0)
+        {
+            List<int> allId = new List<int>()
+            {
+                parentDepartmentId
+            };
+            IEnumerable<int> lstChildDepartmentId = _context.Departments.Where(x => x.ParentId == parentDepartmentId).AsNoTracking().Select(x => x.DepartmentId);
+            if (lstChildDepartmentId.Count() > 0)
+            {
+                foreach (int childDepartmentId in lstChildDepartmentId)
+                {
+                    allId.AddRange(getChildDepartmentId(childDepartmentId));
+                }
+            }
+            return allId.Distinct();
+        }
+
         private IEnumerable<ViewIncomeEmployee> getIncomeEmployees(IEnumerable<int> userIds = null)
         {
             int departmentId = 0;
@@ -140,11 +159,13 @@ namespace FormSendMail
             }
 
             DateTime dataDate = dpkDataDate.Value.Date;
+            IEnumerable<int> allDepartmentIds = getChildDepartmentId(departmentId);
             if (userIds != null)
             {
-                return _context.ViewIncomeEmployees.Where(x => x.DepartmentId == departmentId && x.DataDate == dataDate && userIds.Contains(x.UserId)).ToList();
+
+                return _context.ViewIncomeEmployees.Where(x => allDepartmentIds.Contains(x.DepartmentId) && x.DataDate == dataDate && userIds.Contains(x.UserId)).ToList();
             }
-            return _context.ViewIncomeEmployees.Where(x => x.DepartmentId == departmentId && x.DataDate == dataDate).ToList();
+            return _context.ViewIncomeEmployees.Where(x => allDepartmentIds.Contains(x.DepartmentId) && x.DataDate == dataDate).ToList();
         }
 
         private void setTextTotal(int total)
@@ -236,10 +257,18 @@ namespace FormSendMail
             sendMail(incomes);
         }
 
+        private string formatCurrency(decimal? value)
+        {
+            if (value.HasValue)
+            {
+                return value.Value.ToString("C", new CultureInfo("vi-VN"));
+            }
+            return string.Empty;
+        }
 
         private void sendMail(IEnumerable<ViewIncomeEmployee> incomes)
         {
-            MessageBox.Show("Đang gửi mail, vui lòng đợi...");
+            //MessageBox.Show("Đang gửi mail, vui lòng đợi...");
             resetCounter();
             int progress = 0;
             _total = incomes.Count();
@@ -261,44 +290,82 @@ namespace FormSendMail
             MailAddress from = new MailAddress(sender_address, sender_name);
 
             List<Task> tasks = new List<Task>();
-            foreach (var income in incomes)
-            {
-                SmtpClient mailClient = new SmtpClient(host)
-                {
-                    Port = port,
-                    Credentials = new NetworkCredential(sender_address, password),
-                    EnableSsl = true,
-                };
 
-                mailClient.SendCompleted += OnMailSendCompleted;
-                progress += 1;
-                Employee? em = _context.Employees.Find(income.UserId);
-                if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail))
+
+            string template = System.IO.File.ReadAllText(_configuration.GetValue<string>("MailSettings:Template"));
+            if (!string.IsNullOrWhiteSpace(template))
+            {
+                foreach (var income in incomes)
                 {
-                    MailAddress to = new MailAddress(em.BusinessEmail);
-                    MailMessage message = new MailMessage(from, to)
+                    SmtpClient mailClient = new SmtpClient(host)
                     {
-                        Body = JsonSerializer.Serialize(income),
-                        IsBodyHtml = true,
-                        Subject = string.Format("Bảng Lương nhân viên - {0}", em.FullName),
+                        Port = port,
+                        Credentials = new NetworkCredential(sender_address, password),
+                        EnableSsl = true,
                     };
-                    Task t = mailClient.SendMailAsync(message);
-                    tasks.Add(t);
+
+                    mailClient.SendCompleted += OnMailSendCompleted;
+                    progress += 1;
+                    Employee em = _context.Employees.Find(income.UserId);
+                    if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail))
+                    {
+                        MailAddress to = new MailAddress(em.BusinessEmail);
+
+
+                        string body = template;
+
+
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.KiLuongThang), income.DataDate.ToString("MM/yyyy"), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.HoTen), income.FullName, RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DonVi), income.DepartmentFullName, RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.MaNhanVien), em.UserName, RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ChucVu), em.PositionName, RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.Email), em.BusinessEmail, RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.SoTaiKhoan), "0x000", RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.LuongCoBan), formatCurrency(income.LCB), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.PhuCapTrachNhiem), formatCurrency(income.PCTN), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.PhuCapThamNien), formatCurrency(income.PCTN), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.AnGiuaCa), formatCurrency(income.TienAnGiuaCa), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.TongTienThemGio), formatCurrency(income.TienThemGio), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.TienLamDem), formatCurrency(income.TienLamDem), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.BaoHiemXaHoi), formatCurrency(income.BHXH), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.BaoHiemYTe), formatCurrency(income.BHYT), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.BaoHiemThatNghiep), formatCurrency(income.BHTN), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThueThuNhap), formatCurrency(income.ThueThuNhap), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DoanPhi), formatCurrency(income.DoanPhiCD), RegexOptions.None, TimeSpan.FromSeconds(5));
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThucLinh), formatCurrency(income.ThucLinh), RegexOptions.None, TimeSpan.FromSeconds(5));
+
+
+
+                        MailMessage message = new MailMessage(from, to)
+                        {
+                            Body = body,
+                            IsBodyHtml = true,
+                            Subject = string.Format("BẢNG KÊ CHI TRẢ LƯƠNG {0}", income.DataDate.ToString("MM/yyyy")),
+                        };
+                        Task t = mailClient.SendMailAsync(message);
+                        tasks.Add(t);
+                    }
+                    else
+                    {
+                        _failure += 1;
+                        _message.AppendLine(string.Format("không tìm thấy userId[{0}] hoặc không có địa chỉ email", income.UserId));
+                    }
                 }
-                else
+                try
                 {
-                    _failure += 1;
-                    _message.AppendLine(string.Format("không tìm thấy userId[{0}] hoặc không có địa chỉ email", income.UserId));
+                    Task.WaitAll(tasks.ToArray());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            try
+            else
             {
-                Task.WaitAll(tasks.ToArray());
+                MessageBox.Show("Không tìm thấy template");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         private void OnMailSendCompleted(object sender, AsyncCompletedEventArgs e)
