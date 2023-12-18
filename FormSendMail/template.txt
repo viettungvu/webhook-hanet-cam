@@ -1,0 +1,1979 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <title></title>
+    <!--[if (mso 16)]>
+    <style type="text/css">
+    a {text-decoration: none;}
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+    <!--[if gte mso 9]>
+<xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG></o:AllowPNG>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+
+<body>
+    <div dir="ltr" class="es-wrapper-color">
+        <!--[if gte mso 9]>
+			<v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+				<v:fill type="tile" color="#f6f6f6"></v:fill>
+			</v:background>
+		<![endif]-->
+        <table class="es-wrapper" width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="esd-email-paddings" valign="top">
+                        <table class="esd-header-popover es-header" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-header-body" width="600" cellspacing="0" cellpadding="0"
+                                            bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20" align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame" width="560"
+                                                                        valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <b>BẢNG KÊ CHI TRẢ LƯƠNG
+                                                                                                HÀNG THÁNG CHO NGƯỜI LAO
+                                                                                                ĐỘNG</b>
+                                                                                        </p>
+                                                                                        <p style="font-size: 11px;">
+                                                                                            (Trích Bảng tiền lương hàng
+                                                                                            tháng, kỳ lương tháng
+                                                                                            {{:kiLuong}})</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text es-p15t">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <b>Kính gửi Ông /
+                                                                                                Bà:</b>&nbsp;
+                                                                                            {{:hoTen}}
+                                                                                        </p>
+                                                                                        <p style="font-size: 11px;">Đơn
+                                                                                            vị thông báo chi tiết tiền
+                                                                                            lương hàng tháng cho người
+                                                                                            lao động:</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="esd-footer-popover es-content" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" width="600" cellspacing="0" cellpadding="0"
+                                            bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">STT
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Nội
+                                                                                            dung</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Chi
+                                                                                            tiết nội dung</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-spacer"
+                                                                                        style="font-size:0">
+                                                                                        <table border="0" width="100%"
+                                                                                            height="100%"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td
+                                                                                                        style="border-bottom: 1px solid #020202; background: unset; height: 1px; width: 100%; margin: 0px;">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <b>I. THÔNG TIN NGƯỜI LAO
+                                                                                                ĐỘNG</b>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-spacer"
+                                                                                        style="font-size:0">
+                                                                                        <table border="0" width="100%"
+                                                                                            height="100%"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td
+                                                                                                        style="border-bottom: 1px solid #020202; background: unset; height: 1px; width: 100%; margin: 0px;">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Kì
+                                                                                            lương tháng</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:kiLuong}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Đơn
+                                                                                            vị</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:donVi}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Mã
+                                                                                            nhân viên</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:maNhanVien}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Họ
+                                                                                            tên</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:hoTen}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Chức
+                                                                                            vụ - Chức danh</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:chucVu}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            Email</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:email}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Số
+                                                                                            tài khoản chi trả lương</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:soTaiKhoan}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="560" class="esd-container-frame"
+                                                                        align="center" valign="top">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-spacer"
+                                                                                        style="font-size:0">
+                                                                                        <table border="0" width="100%"
+                                                                                            height="100%"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td
+                                                                                                        style="border-bottom: 1px solid #020202; background: unset; height: 1px; width: 100%; margin: 0px;">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <b>II. CHi TIẾT BẢNG
+                                                                                                LƯƠNG</b>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td align="center"
+                                                                                        class="esd-block-spacer"
+                                                                                        style="font-size:0">
+                                                                                        <table border="0" width="100%"
+                                                                                            height="100%"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td
+                                                                                                        style="border-bottom: 1px solid #020202; background: unset; height: 1px; width: 100%; margin: 0px;">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">1
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <strong>Các khoản thu nhập
+                                                                                                (1)</strong>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            Lương chức danh cơ bản</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:luongCoBan}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Phụ
+                                                                                            cấp trách nhiệm</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:phuCapTrachNhiem}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Phụ
+                                                                                            cấp thâm niên vượt khung</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:phuCapThamNien}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Ăn
+                                                                                            giữa ca</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:anGiuaCa}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Tổng
+                                                                                            tiền thêm giờ</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:tongTienThemGio}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Tiền
+                                                                                            làm đêm</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:tienLamDem}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">2
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <strong></strong><b>Các
+                                                                                                khoản phải nộp
+                                                                                                (2)</b><strong></strong>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Bảo
+                                                                                            hiểm xã hội</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:baoHiemXaHoi}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Bảo
+                                                                                            hiểm y tế</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:baoHiemYTe}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Bảo
+                                                                                            hiểm thất nghiệp</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:baoHiemThatNghiep}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Thuế
+                                                                                            thu nhập tạm tính (nếu có)
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:thueThuNhap}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">Đoàn
+                                                                                            phí công đoàn (nếu có)</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:doanPhi}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">3
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            <b>Tiền lương thực lãnh
+                                                                                                trong tháng = (1) –
+                                                                                                (2)</b>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="esd-structure es-p20r es-p20l" align="left"
+                                                        esd-custom-block-id="1058120">
+                                                        <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="55" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="es-m-p20b esd-container-frame" width="50"
+                                                                        align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p><br></p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="es-hidden" width="5"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="250" valign="top"><![endif]-->
+                                                        <table class="es-left" cellspacing="0" cellpadding="0"
+                                                            align="left">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame es-m-p20b"
+                                                                        width="250" align="left">
+                                                                        <table width="100%" cellspacing="0"
+                                                                            cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;"><br>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td><td width="5"></td><td width="250" valign="top"><![endif]-->
+                                                        <table cellpadding="0" cellspacing="0" class="es-right"
+                                                            align="right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td width="250" align="left"
+                                                                        class="esd-container-frame">
+                                                                        <table cellpadding="0" cellspacing="0"
+                                                                            width="100%">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td align="left"
+                                                                                        class="esd-block-text">
+                                                                                        <p style="font-size: 11px;">
+                                                                                            {{:thucLinh}}</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <!--[if mso]></td></tr></table><![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

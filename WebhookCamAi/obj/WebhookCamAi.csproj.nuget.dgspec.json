@@ -1,37 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj": {}
+    "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj": {}
   },
   "projects": {
-    "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj": {
+    "E:\\webhook-hanet-cam\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj",
+        "projectUniqueName": "E:\\webhook-hanet-cam\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Git Project\\webhook-hanet-cam\\Infra\\obj\\",
+        "projectPath": "E:\\webhook-hanet-cam\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\viett\\.nuget\\packages\\",
+        "outputPath": "E:\\webhook-hanet-cam\\Infra\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\viett\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +37,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -68,12 +63,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -87,25 +76,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj": {
+    "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
+        "projectUniqueName": "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
         "projectName": "WebhookCamAi",
-        "projectPath": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\obj\\",
+        "projectPath": "E:\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
+        "packagesPath": "C:\\Users\\viett\\.nuget\\packages\\",
+        "outputPath": "E:\\webhook-hanet-cam\\WebhookCamAi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\viett\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,15 +103,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj": {
-                "projectPath": "D:\\Git Project\\webhook-hanet-cam\\Infra\\Infra.csproj"
+              "E:\\webhook-hanet-cam\\Infra\\Infra.csproj": {
+                "projectPath": "E:\\webhook-hanet-cam\\Infra\\Infra.csproj"
               }
             }
           }
@@ -186,7 +175,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
