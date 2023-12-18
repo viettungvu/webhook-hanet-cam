@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "quRbEAxNqiSLY9JFz9ypcpOuwoh7HDI5xIeSwk8yhAsB9V0fX2Y2Y981QCYqUcXCWv1Gi6DGZXe9nGUpWzo7fA==",
+  "dgSpecHash": "F2IcjFAosWvY3ICQ/R0OJs2ePEMj8sCR9Jm0WExUf0fc2GaCZmTZQZMFX2Nw5nd3qQiIMEMr1KeEDdo9tqqk/A==",
   "success": true,
   "projectFilePath": "D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\WebhookCamAi.csproj",
   "expectedPackageFiles": [
@@ -81,12 +81,5 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Git Project\\webhook-hanet-cam\\WebhookCamAi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

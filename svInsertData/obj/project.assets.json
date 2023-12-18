@@ -1945,7 +1945,7 @@
       },
       "Infra/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
