@@ -41,8 +41,10 @@
             tableLayoutPanel3 = new TableLayoutPanel();
             dgvData = new DataGridView();
             panel1 = new Panel();
-            lblTotal = new Label();
+            lblSuccess = new Label();
+            lblFail = new Label();
             label3 = new Label();
+            lblTotal = new Label();
             tableLayoutPanel2.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -189,6 +191,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(lblSuccess);
+            panel1.Controls.Add(lblFail);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lblTotal);
             panel1.Dock = DockStyle.Fill;
@@ -196,6 +200,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(975, 36);
             panel1.TabIndex = 1;
+            // 
+            // lblSuccess
+            // 
+            lblSuccess.AutoSize = true;
+            lblSuccess.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblSuccess.ForeColor = Color.Green;
+            lblSuccess.Location = new Point(89, 7);
+            lblSuccess.Name = "lblSuccess";
+            lblSuccess.Size = new Size(106, 20);
+            lblSuccess.TabIndex = 8;
+            lblSuccess.Text = "Thành công: 0";
+            // 
+            // lblFail
+            // 
+            lblFail.AutoSize = true;
+            lblFail.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblFail.ForeColor = Color.Red;
+            lblFail.Location = new Point(206, 7);
+            lblFail.Name = "lblFail";
+            lblFail.Size = new Size(45, 20);
+            lblFail.TabIndex = 7;
+            lblFail.Text = "Lỗi: 0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(880, 7);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 20);
+            label3.TabIndex = 6;
             // 
             // lblTotal
             // 
@@ -205,14 +239,6 @@
             lblTotal.Size = new Size(77, 20);
             lblTotal.TabIndex = 5;
             lblTotal.Text = "Tổng số: 0";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(880, 7);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 20);
-            label3.TabIndex = 6;
             // 
             // frmIncome
             // 
@@ -251,5 +277,7 @@
         private Label lblTotal;
         private Button btnSendMail;
         private Label label3;
+        private Label lblSuccess;
+        private Label lblFail;
     }
 }

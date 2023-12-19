@@ -19,6 +19,7 @@ using System.Text.Json;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Diagnostics.Metrics;
 
 namespace FormSendMail
 {
@@ -98,6 +99,7 @@ namespace FormSendMail
         }
         private void setDataToGrid(IEnumerable<ViewIncomeEmployee> incomes)
         {
+            dgvData.Rows.Clear();
             int total = incomes.Count();
             setTextTotal(total);
             setStateBtnSendMail(total > 0);
@@ -135,7 +137,8 @@ namespace FormSendMail
             {
                 parentDepartmentId
             };
-            IEnumerable<int> lstChildDepartmentId = _context.Departments.Where(x => x.ParentId == parentDepartmentId).AsNoTracking().Select(x => x.DepartmentId);
+
+            List<int> lstChildDepartmentId = _context.Departments.Where(x => x.ParentId == parentDepartmentId).Select(x => x.DepartmentId).ToList();
             if (lstChildDepartmentId.Count() > 0)
             {
                 foreach (int childDepartmentId in lstChildDepartmentId)
@@ -207,26 +210,48 @@ namespace FormSendMail
             _workerSendMail.RunWorkerAsync();
         }
 
-        private void updateProgress(object? sender, ProgressChangedEventArgs e)
+        private void updateProgress(object sender, ProgressChangedEventArgs e)
         {
             prgBar.Value = e.ProgressPercentage;
+            if (e.UserState != null)
+            {
+                try
+                {
+                    CounterState counter = (CounterState)e.UserState;
+                    lblFail.Text = string.Format("Lỗi: {0}", counter.fail);
+                    lblSuccess.Text = string.Format("Thành công: {0}", counter.success);
+                }
+                catch (Exception)
+                {
+
+
+                }
+            }
         }
 
 
-        private int _success = 0;
-        private int _failure = 0;
-        private int _total = 0;
+        private CounterState _counter = new CounterState()
+        {
+            fail = 0,
+            success = 0,
+            total = 0
+        };
+
+        //private int _success = 0;
+        //private int _failure = 0;
+        //private int _total = 0;
         private StringBuilder _message = new StringBuilder();
         private void resetCounter()
         {
-            _success = 0;
-            _failure = 0;
-            _total = 0;
+            //_success = 0;
+            //_failure = 0;
+            //_total = 0;
+            _counter.Reset();
             _message.Clear();
         }
 
 
-        private void guiLuongUserChon(object? sender, EventArgs e)
+        private void guiLuongUserChon(object sender, EventArgs e)
         {
 
             if (_workerSendMail != null && _workerSendMail.IsBusy)
@@ -244,14 +269,14 @@ namespace FormSendMail
             _workerSendMail.RunWorkerCompleted += workerCompleted;
             _workerSendMail.RunWorkerAsync();
         }
-        private void sendSpecificUser(object? sender, DoWorkEventArgs e)
+        private void sendSpecificUser(object sender, DoWorkEventArgs e)
         {
             IEnumerable<int> selectedUserIds = getUserIdSelected();
             IEnumerable<ViewIncomeEmployee> incomes = getIncomeEmployees(selectedUserIds);
             sendMail(incomes);
         }
 
-        private void sendAllUser(object? sender, DoWorkEventArgs e)
+        private void sendAllUser(object sender, DoWorkEventArgs e)
         {
             IEnumerable<ViewIncomeEmployee> incomes = getIncomeEmployees();
             sendMail(incomes);
@@ -268,16 +293,14 @@ namespace FormSendMail
 
         private void sendMail(IEnumerable<ViewIncomeEmployee> incomes)
         {
-            //MessageBox.Show("Đang gửi mail, vui lòng đợi...");
             resetCounter();
-            int progress = 0;
-            _total = incomes.Count();
+            _counter.total = incomes.Count();
             if (prgBar.InvokeRequired)
             {
                 prgBar.Invoke((MethodInvoker)delegate
                 {
-                    prgBar.Maximum = _total;
-                    prgBar.Value = progress;
+                    prgBar.Maximum = _counter.total;
+                    prgBar.Value = 0;
                 });
             }
 
@@ -305,7 +328,6 @@ namespace FormSendMail
                     };
 
                     mailClient.SendCompleted += OnMailSendCompleted;
-                    progress += 1;
                     Employee em = _context.Employees.Find(income.UserId);
                     if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail))
                     {
@@ -335,8 +357,6 @@ namespace FormSendMail
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DoanPhi), formatCurrency(income.DoanPhiCD), RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThucLinh), formatCurrency(income.ThucLinh), RegexOptions.None, TimeSpan.FromSeconds(5));
 
-
-
                         MailMessage message = new MailMessage(from, to)
                         {
                             Body = body,
@@ -348,7 +368,8 @@ namespace FormSendMail
                     }
                     else
                     {
-                        _failure += 1;
+                        _counter.fail += 1;
+                        _workerSendMail.ReportProgress(_counter.success + _counter.fail, _counter);
                         _message.AppendLine(string.Format("không tìm thấy userId[{0}] hoặc không có địa chỉ email", income.UserId));
                     }
                 }
@@ -372,16 +393,16 @@ namespace FormSendMail
         {
             if (e.Error != null)
             {
-                _failure += 1;
+                _counter.fail += 1;
             }
             else
             {
-                _success += 1;
-                _workerSendMail.ReportProgress(_success);
+                _counter.success += 1;
             }
+            _workerSendMail.ReportProgress(_counter.success + _counter.fail, _counter);
         }
 
-        private void workerCompleted(object? sender, RunWorkerCompletedEventArgs e)
+        private void workerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             string message = _message.ToString();
             if (!string.IsNullOrWhiteSpace(message))
@@ -390,7 +411,7 @@ namespace FormSendMail
             }
             else
             {
-                MessageBox.Show(string.Format("Đã gửi thành công {0} mail", _success), "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format("Đã gửi thành công {0} mail", _counter.success), "Hoàn thành", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
