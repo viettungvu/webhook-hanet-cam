@@ -367,3 +367,4 @@ E:\webhook-hanet-cam\WebhookCamAi\obj\Debug\net7.0\refint\WebhookCamAi.dll
 E:\webhook-hanet-cam\WebhookCamAi\obj\Debug\net7.0\WebhookCamAi.pdb
 E:\webhook-hanet-cam\WebhookCamAi\obj\Debug\net7.0\WebhookCamAi.genruntimeconfig.cache
 E:\webhook-hanet-cam\WebhookCamAi\obj\Debug\net7.0\ref\WebhookCamAi.dll
+E:\webhook-hanet-cam\WebhookCamAi\obj\Debug\net7.0\WebhookCamAi.sourcelink.json

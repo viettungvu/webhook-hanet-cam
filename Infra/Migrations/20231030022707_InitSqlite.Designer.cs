@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infra.Migrations
 {
-    [DbContext(typeof(SqliteDbContext))]
+    [DbContext(typeof(HRMLogDbContext))]
     [Migration("20231030022707_InitSqlite")]
     partial class InitSqlite
     {

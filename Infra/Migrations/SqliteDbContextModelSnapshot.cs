@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infra.Migrations
 {
-    [DbContext(typeof(SqliteDbContext))]
+    [DbContext(typeof(HRMLogDbContext))]
     partial class SqliteDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

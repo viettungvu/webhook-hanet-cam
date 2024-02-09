@@ -42,7 +42,7 @@ namespace svInsertData
                 }
                 using (IServiceScope scope = _serviceProvider.CreateScope())
                 {
-                    SqliteDbContext sqliteDbContext = scope.ServiceProvider.GetRequiredService<SqliteDbContext>();
+                    HRMLogDbContext sqliteDbContext = scope.ServiceProvider.GetRequiredService<HRMLogDbContext>();
                     HRMDbContext hrmDbContext = scope.ServiceProvider.GetRequiredService<HRMDbContext>();
                     while (!stoppingToken.IsCancellationRequested)
                     {
@@ -58,7 +58,7 @@ namespace svInsertData
             }
         }
 
-        private async Task DoWork(SqliteDbContext sqliteDbContext, HRMDbContext hrmDbContext)
+        private async Task DoWork(HRMLogDbContext sqliteDbContext, HRMDbContext hrmDbContext)
         {
             try
             {

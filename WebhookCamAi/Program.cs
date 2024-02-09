@@ -9,7 +9,7 @@ builder.Services.AddDbContext<HRMDbContext>(option => {
 });
 
 
-builder.Services.AddDbContext<SqliteDbContext>(option => {
+builder.Services.AddDbContext<HRMLogDbContext>(option => {
     option.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 });
 

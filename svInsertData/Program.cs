@@ -13,7 +13,7 @@ internal class Program
             var service = scope.ServiceProvider;
             try
             {
-                var context = service.GetRequiredService<SqliteDbContext>();
+                var context = service.GetRequiredService<HRMLogDbContext>();
                 context.Database.EnsureCreated();
             }
             catch (Exception)
@@ -40,7 +40,7 @@ internal class Program
             .ConfigureServices((context, services) =>
             {
                 IConfiguration configuration = context.Configuration;
-                services.AddDbContext<SqliteDbContext>(opts =>
+                services.AddDbContext<HRMLogDbContext>(opts =>
                 {
                     opts.UseSqlite(configuration.GetConnectionString("Sqlite"));
                 });

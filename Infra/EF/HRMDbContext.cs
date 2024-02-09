@@ -66,17 +66,5 @@ namespace Infra.EF
         }
     }
 
-    public class SqliteDbContext : DbContext
-    {
-        public SqliteDbContext()
-        {
-
-        }
-        public SqliteDbContext(DbContextOptions<SqliteDbContext> options) : base(options)
-        {
-
-        }
-
-        public DbSet<CheckinFail> CheckinData { get; set; }
-    }
+   
 }

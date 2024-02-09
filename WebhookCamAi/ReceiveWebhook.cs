@@ -13,9 +13,9 @@ namespace WebhookCamAi
     {
         private readonly HRMDbContext _context;
         private readonly IConfiguration _configuration;
-        private readonly SqliteDbContext _sqliteDbContext;
+        private readonly HRMLogDbContext _sqliteDbContext;
 
-        public ReceiveWebhook(HRMDbContext mainContext, SqliteDbContext sqliteDbContext, IConfiguration configuration)
+        public ReceiveWebhook(HRMDbContext mainContext, HRMLogDbContext sqliteDbContext, IConfiguration configuration)
         {
             _configuration = configuration;
             _context = mainContext;
