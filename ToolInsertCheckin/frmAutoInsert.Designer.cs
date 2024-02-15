@@ -30,6 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            btnRefresh = new Button();
             btnAuto = new Button();
             label1 = new Label();
             dpkAuthDate = new DateTimePicker();
@@ -40,7 +41,6 @@
             lblTotal = new Label();
             prgBar = new ProgressBar();
             txtTerminal = new RichTextBox();
-            btnRefresh = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -56,6 +56,7 @@
             tableLayoutPanel1.Controls.Add(panel2, 0, 1);
             tableLayoutPanel1.Controls.Add(panel3, 0, 2);
             tableLayoutPanel1.Controls.Add(txtTerminal, 0, 3);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
@@ -63,7 +64,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new Size(992, 659);
+            tableLayoutPanel1.Size = new Size(992, 663);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -77,6 +78,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(986, 52);
             panel1.TabIndex = 0;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRefresh.BackColor = SystemColors.ButtonFace;
+            btnRefresh.Cursor = Cursors.Hand;
+            btnRefresh.Location = new Point(583, 10);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(194, 29);
+            btnRefresh.TabIndex = 3;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnAuto
             // 
@@ -149,16 +163,16 @@
             lblLastRun.Name = "lblLastRun";
             lblLastRun.Size = new Size(102, 20);
             lblLastRun.TabIndex = 2;
-            lblLastRun.Text = "Last run: 12:00";
+            lblLastRun.Text = "Last run: 00:00";
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
             lblTotal.Location = new Point(564, 18);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(88, 20);
+            lblTotal.Size = new Size(105, 20);
             lblTotal.TabIndex = 1;
-            lblTotal.Text = "Inserted 0/0";
+            lblTotal.Text = "Processing 0/0";
             // 
             // prgBar
             // 
@@ -169,27 +183,16 @@
             // 
             // txtTerminal
             // 
-            txtTerminal.BackColor = SystemColors.InfoText;
+            txtTerminal.BackColor = SystemColors.WindowText;
+            txtTerminal.BorderStyle = BorderStyle.FixedSingle;
             txtTerminal.Dock = DockStyle.Fill;
             txtTerminal.Enabled = false;
+            txtTerminal.ForeColor = Color.White;
             txtTerminal.Location = new Point(3, 391);
             txtTerminal.Name = "txtTerminal";
-            txtTerminal.Size = new Size(986, 265);
+            txtTerminal.Size = new Size(986, 269);
             txtTerminal.TabIndex = 3;
-            txtTerminal.Text = "";
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRefresh.BackColor = SystemColors.ButtonFace;
-            btnRefresh.Cursor = Cursors.Hand;
-            btnRefresh.Location = new Point(583, 10);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(194, 29);
-            btnRefresh.TabIndex = 3;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = false;
-            btnRefresh.Click += btnRefresh_Click;
+            txtTerminal.Text = "Demo Text";
             // 
             // frmAutoInsert
             // 

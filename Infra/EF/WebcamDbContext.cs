@@ -27,7 +27,7 @@ namespace Infra.EF
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Attendance>()
-              .ToTable("Attendance")
+              .ToTable("Attendance_Log")
                 .HasKey(x => x.Id);
 
             DbSeedData.SeedWebCamData(modelBuilder);

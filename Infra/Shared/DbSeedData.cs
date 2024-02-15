@@ -10,6 +10,8 @@ namespace Infra.Shared
 {
     public static class DbSeedData
     {
+
+        static Random _rd = new Random();
         public static void SeedWebCamData(ModelBuilder modelBuilder)
         {
             List<Attendance> attendances = new List<Attendance>();
@@ -18,11 +20,12 @@ namespace Infra.Shared
                 attendances.Add(new Attendance
                 {
                     Id = i + 1,
-                    Flag = i % 2,
-                    UserID = i % 2 == 0 ? 5674 : 5677,
+                    Flag = _rd.Next(0, 2),
+                    UserID = _rd.Next(5670, 5680),
                     DeviceName = "Webcam EZVIZ",
                     AuthDate = DateTime.Now,
                     AuthDateTime = DateTime.Now,
+                    AuthTime = DateTime.Now,
                 });
             }
 

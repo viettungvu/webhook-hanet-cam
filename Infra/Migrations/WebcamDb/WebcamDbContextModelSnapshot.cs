@@ -53,95 +53,95 @@ namespace Infra.Migrations.WebcamDb
 
                     b.HasKey("Id");
 
-                    b.ToTable("Attendance", (string)null);
+                    b.ToTable("Attendance_Log", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6401),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6409),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8448),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8457),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8458),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 2,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6412),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6413),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8460),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8461),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8462),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 3,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6414),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6414),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8469),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8470),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8470),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 4,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6415),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6416),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8471),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8472),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8473),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 5,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6417),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6417),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8474),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8474),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8475),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 6,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6420),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6420),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8477),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8478),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8478),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 7,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6421),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6422),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8480),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8480),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8481),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 8,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6423),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6423),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8482),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8483),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8483),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 9,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6424),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6424),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8484),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8485),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8485),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -149,139 +149,139 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 10,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6426),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6427),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8487),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8488),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8488),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 11,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6427),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6428),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8489),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8490),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8491),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 12,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6429),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6429),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8492),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8492),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8493),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
+                            Flag = 0,
                             UserID = 5677
                         },
                         new
                         {
                             Id = 13,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6430),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6430),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8494),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8494),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8495),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 14,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6431),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6432),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8496),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8497),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8497),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 15,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6432),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6433),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8498),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8499),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8500),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 16,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6434),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6434),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8501),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8501),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8502),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 17,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6435),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6435),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8503),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8503),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8504),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 18,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6437),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6438),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8506),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8506),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8507),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 19,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6438),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6439),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8508),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8509),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8509),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 20,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6440),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6440),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8510),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8511),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8511),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 21,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6441),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6441),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8512),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8513),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8513),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 22,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6442),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6443),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8515),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8515),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8516),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 23,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6443),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6444),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8517),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8517),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8518),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -289,219 +289,219 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 24,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6445),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6446),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8519),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8519),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8520),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 25,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6446),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6447),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8521),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8521),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8522),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5677
                         },
                         new
                         {
                             Id = 26,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6448),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6448),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8523),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8523),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8524),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 27,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6449),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6449),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8525),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8526),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8526),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 28,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6450),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6451),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8527),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8527),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8528),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 29,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6451),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6452),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8529),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8530),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8530),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 30,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6453),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6453),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8531),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8532),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8532),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 31,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6454),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6454),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8533),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8534),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8534),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 32,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6455),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6456),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8535),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8536),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8536),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 33,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6457),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6457),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8537),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8538),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8538),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 34,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6459),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6459),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8540),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8541),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8541),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 35,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6460),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6461),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8542),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8543),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8543),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 36,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6461),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6462),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8544),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8544),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8545),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 37,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6463),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6463),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8546),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8547),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8547),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 38,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6464),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6465),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8548),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8549),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8549),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 39,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6465),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6466),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8550),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8551),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8551),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 40,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6467),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6467),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8552),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8553),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8553),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 41,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6468),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6468),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8554),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8555),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8555),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 42,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6469),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6470),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8556),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8557),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8557),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 43,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6470),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6471),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8558),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8559),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8559),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 44,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6472),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6472),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8561),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8561),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8562),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 45,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6473),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6473),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8563),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8563),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8564),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -509,119 +509,119 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 46,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6474),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6475),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8564),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8565),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8566),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 47,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6476),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6476),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8567),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8567),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8568),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 48,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6477),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6477),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8569),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8569),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8570),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 49,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6478),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6479),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8571),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8571),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8572),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 50,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6479),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6480),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8573),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8573),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8574),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 51,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6481),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6481),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8575),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8576),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8576),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 52,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6482),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6482),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8577),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8578),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8578),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 53,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6483),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6484),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8579),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8580),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8580),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 54,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6485),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6485),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8581),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8581),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8582),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 55,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6486),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6486),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8583),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8584),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8584),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
-                        },
-                        new
-                        {
-                            Id = 56,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6494),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6494),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
                             UserID = 5677
                         },
                         new
                         {
+                            Id = 56,
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8585),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8586),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8587),
+                            DeviceName = "Webcam EZVIZ",
+                            Flag = 0,
+                            UserID = 5673
+                        },
+                        new
+                        {
                             Id = 57,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6495),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6495),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8587),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8588),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8589),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -629,259 +629,259 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 58,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6496),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6497),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8590),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8590),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8591),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 59,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6498),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6498),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8592),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8592),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8593),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 60,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6499),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6499),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8594),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8595),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8595),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 61,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6500),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6501),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8596),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8597),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8597),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 62,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6501),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6502),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8598),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8599),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8599),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 63,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6503),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6503),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8600),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8601),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8601),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 64,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6504),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6504),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8602),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8603),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8603),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 65,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6505),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6506),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8604),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8605),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8605),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 66,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6507),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6508),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8607),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8608),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8608),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 67,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6509),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6509),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8609),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8610),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8610),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 68,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6510),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6511),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8611),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8612),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8612),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 69,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6511),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6512),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8613),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8614),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8615),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 70,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6513),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6513),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8615),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8616),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8617),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 71,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6514),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6514),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8617),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8618),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8619),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 72,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6515),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6516),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8620),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8620),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8621),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5670
                         },
                         new
                         {
                             Id = 73,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6516),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6517),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8621),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8622),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8623),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 74,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6518),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6518),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8624),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8624),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8625),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 75,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6519),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6519),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8626),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8626),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8627),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5677
                         },
                         new
                         {
                             Id = 76,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6520),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6521),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8628),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8628),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8629),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
+                            Flag = 0,
                             UserID = 5677
                         },
                         new
                         {
                             Id = 77,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6521),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6522),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8630),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8630),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8631),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 78,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6523),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6523),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8632),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8632),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8633),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 79,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6524),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6524),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8634),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8634),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8635),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 80,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6525),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6526),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8636),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8636),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8637),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5678
                         },
                         new
                         {
                             Id = 81,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6527),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6527),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8638),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8639),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8639),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 82,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6528),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6529),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8640),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8641),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8641),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 83,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6529),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6530),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8642),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8643),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8643),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -889,119 +889,119 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 84,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6531),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6531),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8644),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8645),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8645),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5671
                         },
                         new
                         {
                             Id = 85,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6532),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6532),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8646),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8647),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8647),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 86,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6533),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6534),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8648),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8649),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8649),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         },
                         new
                         {
                             Id = 87,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6534),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6535),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8655),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8655),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8656),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5676
                         },
                         new
                         {
                             Id = 88,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6536),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6536),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8657),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8657),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8658),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 89,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6537),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6537),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8659),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8659),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8660),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5672
                         },
                         new
                         {
                             Id = 90,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6538),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6539),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8661),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8661),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8662),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
+                            Flag = 0,
                             UserID = 5677
                         },
                         new
                         {
                             Id = 91,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6539),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6540),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8663),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8663),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8664),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 92,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6541),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6541),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8665),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8666),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8666),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
+                            Flag = 0,
                             UserID = 5677
                         },
                         new
                         {
                             Id = 93,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6542),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6543),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8667),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8668),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8668),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 94,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6543),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6544),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8669),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8670),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8670),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5679
                         },
                         new
                         {
                             Id = 95,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6545),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6545),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8671),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8672),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8672),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
                             UserID = 5674
@@ -1009,52 +1009,52 @@ namespace Infra.Migrations.WebcamDb
                         new
                         {
                             Id = 96,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6546),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6546),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8673),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8674),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8674),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 97,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6547),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6548),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8675),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8676),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8676),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5673
                         },
                         new
                         {
                             Id = 98,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6548),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6549),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8677),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8678),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8678),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 99,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6550),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6550),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8679),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8680),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8680),
                             DeviceName = "Webcam EZVIZ",
                             Flag = 0,
-                            UserID = 5674
+                            UserID = 5675
                         },
                         new
                         {
                             Id = 100,
-                            AuthDate = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6551),
-                            AuthDateTime = new DateTime(2024, 2, 8, 22, 14, 15, 465, DateTimeKind.Local).AddTicks(6551),
-                            AuthTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AuthDate = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8681),
+                            AuthDateTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8682),
+                            AuthTime = new DateTime(2024, 2, 15, 20, 5, 9, 885, DateTimeKind.Local).AddTicks(8682),
                             DeviceName = "Webcam EZVIZ",
-                            Flag = 1,
-                            UserID = 5677
+                            Flag = 0,
+                            UserID = 5674
                         });
                 });
 #pragma warning restore 612, 618
