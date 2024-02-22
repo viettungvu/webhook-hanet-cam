@@ -32,6 +32,8 @@ namespace FormSendMail
         public const string ThueThuNhap = "thueThuNhap";
         public const string DoanPhi = "doanPhi";
         public const string ThucLinh = "thucLinh";
+        public const string Logo = "[SIGNATURE_LOGO]";
+
     }
     public static class MailUtils
     {

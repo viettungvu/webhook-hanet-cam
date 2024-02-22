@@ -20,6 +20,7 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Diagnostics.Metrics;
+using System.Net.Mime;
 
 namespace FormSendMail
 {
@@ -318,6 +319,11 @@ namespace FormSendMail
             string template = System.IO.File.ReadAllText(_configuration.GetValue<string>("MailSettings:Template"));
             if (!string.IsNullOrWhiteSpace(template))
             {
+
+                string imageLogo =AppContext.BaseDirectory+ _configuration.GetValue<string>("MailSettings:SignatureLogo");
+               
+               
+
                 foreach (var income in incomes)
                 {
                     SmtpClient mailClient = new SmtpClient(host)
@@ -357,11 +363,18 @@ namespace FormSendMail
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DoanPhi), formatCurrency(income.DoanPhiCD), RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThucLinh), formatCurrency(income.ThucLinh), RegexOptions.None, TimeSpan.FromSeconds(5));
 
+                        LinkedResource linkedResource = new LinkedResource(imageLogo, MediaTypeNames.Image.Jpeg);
+                        linkedResource.ContentId = MailConst.Logo;
+                        
+                        AlternateView alternateView = AlternateView.CreateAlternateViewFromString(body, null, MediaTypeNames.Text.Html);
+                        alternateView.LinkedResources.Add(linkedResource);
+
                         MailMessage message = new MailMessage(from, to)
                         {
-                            Body = body,
-                            IsBodyHtml = true,
                             Subject = string.Format("BẢNG KÊ CHI TRẢ LƯƠNG {0}", income.DataDate.ToString("MM/yyyy")),
+                            //Body = body,
+                            IsBodyHtml = true,
+                            AlternateViews = { alternateView },
                         };
                         Task t = mailClient.SendMailAsync(message);
                         tasks.Add(t);
