@@ -45,6 +45,7 @@
             lblFail = new Label();
             label3 = new Label();
             lblTotal = new Label();
+            btnViewLog = new Button();
             tableLayoutPanel2.SuspendLayout();
             groupBox1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -79,6 +80,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnViewLog);
             groupBox1.Controls.Add(btnSendMail);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
@@ -240,6 +242,16 @@
             lblTotal.TabIndex = 5;
             lblTotal.Text = "Tổng số: 0";
             // 
+            // btnViewLog
+            // 
+            btnViewLog.Location = new Point(306, 91);
+            btnViewLog.Name = "btnViewLog";
+            btnViewLog.Size = new Size(144, 42);
+            btnViewLog.TabIndex = 6;
+            btnViewLog.Text = "View Log";
+            btnViewLog.UseVisualStyleBackColor = true;
+            btnViewLog.Click += btnViewLog_Click;
+            // 
             // frmIncome
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -279,5 +291,6 @@
         private Label label3;
         private Label lblSuccess;
         private Label lblFail;
+        private Button btnViewLog;
     }
 }

@@ -21,6 +21,8 @@ using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Diagnostics.Metrics;
 using System.Net.Mime;
+using Newtonsoft.Json.Linq;
+using System.Threading.Tasks.Dataflow;
 
 namespace FormSendMail
 {
@@ -292,8 +294,13 @@ namespace FormSendMail
             return string.Empty;
         }
 
+        List<Task> tasks = new List<Task>();
+        Dictionary<int, MailLog> _mailLog = new Dictionary<int, MailLog>();
+
+
         private void sendMail(IEnumerable<ViewIncomeEmployee> incomes)
         {
+            _mailLog.Clear();
             resetCounter();
             _counter.total = incomes.Count();
             if (prgBar.InvokeRequired)
@@ -312,10 +319,6 @@ namespace FormSendMail
             string password = _configuration.GetValue<string>("MailSettings:SenderSecret");
 
             MailAddress from = new MailAddress(sender_address, sender_name);
-
-            List<Task> tasks = new List<Task>();
-
-
             string template = System.IO.File.ReadAllText(_configuration.GetValue<string>("MailSettings:Template"));
             if (!string.IsNullOrWhiteSpace(template))
             {
@@ -378,6 +381,14 @@ namespace FormSendMail
                         };
                         Task t = mailClient.SendMailAsync(message);
                         tasks.Add(t);
+
+                        _mailLog.Add(t.Id, new MailLog
+                        {
+                            DataDate = income.DataDate,
+                            UserId = income.UserId,
+                            Email = em.BusinessEmail,
+                        });
+                        Thread.Sleep(1000);
                     }
                     else
                     {
@@ -404,6 +415,24 @@ namespace FormSendMail
 
         private void OnMailSendCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            try
+            {
+                JObject state = JObject.Parse(e.UserState.ToString());
+                if (int.TryParse(Convert.ToString(state["Id"]), out int taskId) && _mailLog.ContainsKey(taskId))
+                {
+                    _mailLog[taskId].Status = e.Error != null ? MailSendStatus.SUCCESSED : MailSendStatus.FAILED;
+                    if (_mailLog[taskId].Status == MailSendStatus.FAILED)
+                    {
+                        _mailLog[taskId].ErrorCount += 1;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+
             if (e.Error != null)
             {
                 _counter.fail += 1;
@@ -417,6 +446,15 @@ namespace FormSendMail
 
         private void workerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (_mailLog.Count > 0)
+            {
+                _context.MailLogs.AddRange(_mailLog.Values);
+                _context.SaveChanges();
+                frmViewMailLog frmMailLog = new frmViewMailLog(_context, _configuration);
+                frmMailLog.Ids = _mailLog.Values.Select(x => x.Id);
+                frmMailLog.Show();
+
+            }
             string message = _message.ToString();
             if (!string.IsNullOrWhiteSpace(message))
             {
@@ -429,5 +467,20 @@ namespace FormSendMail
         }
 
         private static string footer = "<table style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #e7e7e7;width:100%\" cellpadding=\"0\" cellspacing=\"0\">\r\n  <tbody>\r\n  <tr style=\"vertical-align: top\">\r\n    <td style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top\">\r\n    <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td align=\"center\" style=\"background-color: #e7e7e7;\"><![endif]-->\r\n    \r\n  \r\n  \r\n<div class=\"u-row-container\" style=\"padding: 0px;background-color: transparent\">\r\n  <div class=\"u-row\" style=\"margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;\">\r\n    <div style=\"border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;\">\r\n      <!--[if (mso)|(IE)]><table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tr><td style=\"padding: 0px;background-color: transparent;\" align=\"center\"><table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"width:500px;\"><tr style=\"background-color: transparent;\"><![endif]-->\r\n      \r\n<!--[if (mso)|(IE)]><td align=\"center\" width=\"500\" style=\"width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;\" valign=\"top\"><![endif]-->\r\n<div class=\"u-col u-col-100\" style=\"max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;\">\r\n  <div style=\"height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;\">\r\n  <!--[if (!mso)&(!IE)]><!--><div style=\"box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;\"><!--<![endif]-->\r\n  \r\n<table style=\"font-family:arial,helvetica,sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\r\n  <tbody>\r\n    <tr>\r\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;\" align=\"left\">\r\n        \r\n  <div style=\"font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;\">\r\n    <p style=\"line-height: 140%;\">NGUYEN CHAU THANH HAU (MR.)<br />IT-Software<br />Planning &amp; IT Division<br />Cell: 84-792 723 651<br />Email: haunguyen.08061999@gmail.com</p>\r\n  </div>\r\n\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n<table style=\"font-family:arial,helvetica,sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\r\n  <tbody>\r\n    <tr>\r\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;\" align=\"left\">\r\n        \r\n  <table height=\"0px\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%\">\r\n    <tbody>\r\n      <tr style=\"vertical-align: top\">\r\n        <td style=\"word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%\">\r\n          <span>&#160;</span>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n<table style=\"font-family:arial,helvetica,sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\r\n  <tbody>\r\n    <tr>\r\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;\" align=\"left\">\r\n        \r\n<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\r\n  <tr>\r\n    <td style=\"padding-right: 0px;padding-left: 0px;\" align=\"center\">\r\n      \r\n      <img align=\"center\" border=\"0\" src=\"cid:[SIGNATURE_LOGO]\" alt=\"\" title=\"\" style=\"outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 480px;\" width=\"480\"/>\r\n      \r\n    </td>\r\n  </tr>\r\n</table>\r\n\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n<table style=\"font-family:arial,helvetica,sans-serif;\" role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\">\r\n  <tbody>\r\n    <tr>\r\n      <td style=\"overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;\" align=\"left\">\r\n        \r\n  <div style=\"font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;\">\r\n    <p style=\"line-height: 140%;\">This email and any fi­les transmitted with it are con­dential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the system manager.<br />Please note that any views or opinions presented in this email are solely those of the author and do not necessarily represent those of SAIGON GROUND SERVICES JSC. Finally, the recipient should check this email and any attachments for the presence of viruses. SAIGON GROUND SERVICES JSC accepts no liability for any damage caused by any virus transmitted by this email. Thank you!<br />PLEASE CONSIDER THE ENVIRONMENT BEFORE PRINTING THIS EMAIL.</p>\r\n  </div>\r\n\r\n      </td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->\r\n  </div>\r\n</div>\r\n<!--[if (mso)|(IE)]></td><![endif]-->\r\n      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->\r\n    </div>\r\n  </div>\r\n  </div>\r\n  \r\n\r\n\r\n    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->\r\n    </td>\r\n  </tr>\r\n  </tbody>\r\n  </table>";
+
+        private void btnViewLog_Click(object sender, EventArgs e)
+        {
+            //_context.MailLogs.Add(new MailLog
+            //{
+            //    UserId = 5674,
+            //    Email = "tungvv@xmedia.vn",
+            //    Status = MailSendStatus.FAILED,
+            //    DataDate = dpkDataDate.Value,
+            //});
+            //_context.SaveChanges();
+            frmViewMailLog frmMailLog = new frmViewMailLog(_context, _configuration);
+            frmMailLog.DataDate = dpkDataDate.Value.Date;
+            frmMailLog.Show();
+        }
     }
 }

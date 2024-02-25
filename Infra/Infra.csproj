@@ -21,6 +21,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Migrations\HRMDb\" />
 	  <Folder Include="Migrations\WebcamDb\" />
 	</ItemGroup>
 

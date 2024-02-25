@@ -22,7 +22,7 @@ namespace Infra.EF
 
         public DbSet<ViewIncomeEmployee> ViewIncomeEmployees { get; set; }
         public DbSet<ViewDepartmentEmployee> ViewDepartmentEmployees { get; set; }
-
+        public DbSet<MailLog> MailLogs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -62,9 +62,11 @@ namespace Infra.EF
                .HasNoKey()
                .ToView("View_H0_DepartmentEmployee");
 
-
+            modelBuilder.Entity<MailLog>()
+                .ToTable("MailLogs")
+                .HasKey(x => x.Id);
         }
     }
 
-   
+
 }
