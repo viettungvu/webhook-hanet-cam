@@ -18,6 +18,7 @@ namespace Infra.Models
         public DateTime DataDate { get; set; }
         public decimal? TotalIncome { get; set; }
         public decimal? ThucLinh { get; set; }
+        public decimal? ThucLinhLCB { get; set; }
         public decimal? LCB { get; set; }
         public decimal? PCCV { get; set; }
         public decimal? PCTN { get; set; }
@@ -29,6 +30,13 @@ namespace Infra.Models
         public decimal? BHTN { get; set; }
         public decimal? ThueThuNhap { get; set; }
         public decimal? DoanPhiCD { get; set; }
+        public decimal? Tong
+        {
+            get
+            {
+                return ThucLinh + ThucLinhLCB;
+            }
+        }
     }
 
     public class ViewDepartmentEmployee

@@ -20,6 +20,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Globalization;
+using Utils;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace FormSendMail
 {
@@ -34,7 +36,6 @@ namespace FormSendMail
         private IEnumerable<MailLog> _logs;
         private BackgroundWorker _workerSendMail;
 
-        private const int MAX_ERROR = 5;
         public frmViewMailLog(HRMDbContext context, IConfiguration config)
         {
             _context = context;
@@ -53,13 +54,13 @@ namespace FormSendMail
             if (Ids != null && Ids.Count() > 0)
             {
 
-                _logs = _context.MailLogs.Where(x => Ids.Contains(x.Id) && x.ErrorCount <= MAX_ERROR);
+                _logs = _context.MailLogs.Where(x => Ids.Contains(x.Id) && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG);
                 setDataToGrid(_logs);
                 activeBtnResend(_logs.Count() > 0);
             }
             else if (DataDate.HasValue)
             {
-                _logs = _context.MailLogs.Where(x => x.DataDate == DataDate.Value && x.ErrorCount <= MAX_ERROR);
+                _logs = _context.MailLogs.Where(x => x.DataDate == DataDate.Value && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG);
                 setDataToGrid(_logs);
                 activeBtnResend(_logs.Count() > 0);
             }
@@ -125,20 +126,20 @@ namespace FormSendMail
 
                                 string imageLogo = AppContext.BaseDirectory + _configuration.GetValue<string>("MailSettings:SignatureLogo");
 
-                                SmtpClient mailClient = new SmtpClient(host)
-                                {
-                                    Port = port,
-                                    Credentials = new NetworkCredential(sender_address, password),
-                                    EnableSsl = true,
-                                };
 
-                                mailClient.SendCompleted += OnMailSendCompleted;
                                 Employee em = _context.Employees.Find(income.UserId);
-                                if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail))
+                                //26/02/2024
+                                if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail) && RegExpUtil.IsValidEmail(em.BusinessEmail))
                                 {
+                                    SmtpClient mailClient = new SmtpClient(host)
+                                    {
+                                        Port = port,
+                                        Credentials = new NetworkCredential(sender_address, password),
+                                        EnableSsl = true,
+                                    };
+
+                                    mailClient.SendCompleted += OnMailSendCompleted;
                                     MailAddress to = new MailAddress(em.BusinessEmail);
-
-
                                     string body = template;
 
 
@@ -161,6 +162,9 @@ namespace FormSendMail
                                     body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThueThuNhap), formatCurrency(income.ThueThuNhap), RegexOptions.None, TimeSpan.FromSeconds(5));
                                     body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DoanPhi), formatCurrency(income.DoanPhiCD), RegexOptions.None, TimeSpan.FromSeconds(5));
                                     body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThucLinh), formatCurrency(income.ThucLinh), RegexOptions.None, TimeSpan.FromSeconds(5));
+                                    body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.Tong), formatCurrency(income.Tong), RegexOptions.None, TimeSpan.FromSeconds(5));
+
+
                                     body += footer;
                                     LinkedResource linkedResource = new LinkedResource(imageLogo, MediaTypeNames.Image.Jpeg);
                                     linkedResource.ContentId = MailConst.Logo;
@@ -181,7 +185,7 @@ namespace FormSendMail
                                     Thread.Sleep(1000);
                                 }
                                 else
-                                {
+                                { 
                                     _counter.fail += 1;
                                     _workerSendMail.ReportProgress(_counter.success + _counter.fail, _counter);
                                 }

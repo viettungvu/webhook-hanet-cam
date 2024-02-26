@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebhookCamAi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab165d4e2a6f8855fcdd88fd63718ebc9ffcd31")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+851c278878974d57eaae5b682d6455b2f4390a37")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebhookCamAi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebhookCamAi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

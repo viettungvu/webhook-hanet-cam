@@ -15,9 +15,5 @@ namespace Infra.Models
         public int ErrorCount { get; set; }
         public MailSendStatus Status { get; set; } = MailSendStatus.FAILED;
     }
-    public enum MailSendStatus
-    {
-        SUCCESSED=1,
-        FAILED=2,
-    }
+   
 }

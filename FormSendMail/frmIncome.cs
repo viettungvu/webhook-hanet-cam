@@ -23,6 +23,7 @@ using System.Diagnostics.Metrics;
 using System.Net.Mime;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks.Dataflow;
+using Utils;
 
 namespace FormSendMail
 {
@@ -84,7 +85,7 @@ namespace FormSendMail
             dgvData.MouseClick += openMenuContext;
         }
 
-        private void openMenuContext(object? sender, MouseEventArgs arg)
+        private void openMenuContext(object sender, MouseEventArgs arg)
         {
             if (arg.Button == MouseButtons.Right)
             {
@@ -295,7 +296,7 @@ namespace FormSendMail
         }
 
         List<Task> tasks = new List<Task>();
-        Dictionary<int, MailLog> _mailLog = new Dictionary<int, MailLog>();
+        Dictionary<long, MailLog> _mailLog = new Dictionary<long, MailLog>();
 
 
         private void sendMail(IEnumerable<ViewIncomeEmployee> incomes)
@@ -312,40 +313,37 @@ namespace FormSendMail
                 });
             }
 
-            int port = _configuration.GetValue<int>("MailSettings:Port");
-            string host = _configuration.GetValue<string>("MailSettings:Host");
-            string sender_address = _configuration.GetValue<string>("MailSettings:SenderAddress");
-            string sender_name = _configuration.GetValue<string>("MailSettings:SenderName");
-            string password = _configuration.GetValue<string>("MailSettings:SenderSecret");
-
-            MailAddress from = new MailAddress(sender_address, sender_name);
             string template = System.IO.File.ReadAllText(_configuration.GetValue<string>("MailSettings:Template"));
             if (!string.IsNullOrWhiteSpace(template))
             {
 
+                int port = _configuration.GetValue<int>("MailSettings:Port");
+                string host = _configuration.GetValue<string>("MailSettings:Host");
+                string sender_address = _configuration.GetValue<string>("MailSettings:SenderAddress");
+                string sender_name = _configuration.GetValue<string>("MailSettings:SenderName");
+                string password = _configuration.GetValue<string>("MailSettings:SenderSecret");
+
+                MailAddress from = new MailAddress(sender_address, sender_name);
                 string imageLogo = AppContext.BaseDirectory + _configuration.GetValue<string>("MailSettings:SignatureLogo");
 
-
+                long tick = DateTime.Now.Ticks;
 
                 foreach (var income in incomes)
                 {
-                    SmtpClient mailClient = new SmtpClient(host)
-                    {
-                        Port = port,
-                        Credentials = new NetworkCredential(sender_address, password),
-                        EnableSsl = true,
-                    };
-
-                    mailClient.SendCompleted += OnMailSendCompleted;
                     Employee em = _context.Employees.Find(income.UserId);
-                    if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail))
+                    //26/02/2024
+                    if (em != null && !string.IsNullOrWhiteSpace(em.BusinessEmail) && RegExpUtil.IsValidEmail(em.BusinessEmail))
                     {
+                        SmtpClient mailClient = new SmtpClient(host)
+                        {
+                            Port = port,
+                            Credentials = new NetworkCredential(sender_address, password),
+                            EnableSsl = true,
+                        };
+
+                        mailClient.SendCompleted += OnMailSendCompleted;
                         MailAddress to = new MailAddress(em.BusinessEmail);
-
-
                         string body = template;
-
-
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.KiLuongThang), income.DataDate.ToString("MM/yyyy"), RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.HoTen), income.FullName, RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DonVi), income.DepartmentFullName, RegexOptions.None, TimeSpan.FromSeconds(5));
@@ -365,6 +363,13 @@ namespace FormSendMail
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThueThuNhap), formatCurrency(income.ThueThuNhap), RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.DoanPhi), formatCurrency(income.DoanPhiCD), RegexOptions.None, TimeSpan.FromSeconds(5));
                         body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.ThucLinh), formatCurrency(income.ThucLinh), RegexOptions.None, TimeSpan.FromSeconds(5));
+
+
+
+                        body = Regex.Replace(body, MailUtils.GetReplaceField(MailConst.Tong), formatCurrency(income.Tong), RegexOptions.None, TimeSpan.FromSeconds(5));
+
+
+
                         body += footer;
                         LinkedResource linkedResource = new LinkedResource(imageLogo, MediaTypeNames.Image.Jpeg);
                         linkedResource.ContentId = MailConst.Logo;
@@ -393,6 +398,15 @@ namespace FormSendMail
                     else
                     {
                         _counter.fail += 1;
+                        _mailLog.Add(tick, new MailLog
+                        {
+                            DataDate = income.DataDate,
+                            UserId = income.UserId,
+                            Email = em.BusinessEmail,
+                            ErrorCount = Constants.MAX_ERROR_MAIL_LOG,
+                            Status = MailSendStatus.FAILED,
+                        });
+                        tick += 1;
                         _workerSendMail.ReportProgress(_counter.success + _counter.fail, _counter);
                         _message.AppendLine(string.Format("không tìm thấy userId[{0}] hoặc không có địa chỉ email", income.UserId));
                     }
@@ -417,13 +431,13 @@ namespace FormSendMail
         {
             try
             {
-                JObject state = JObject.Parse(e.UserState.ToString());
-                if (int.TryParse(Convert.ToString(state["Id"]), out int taskId) && _mailLog.ContainsKey(taskId))
+                TaskCompletionSource taskSource = (TaskCompletionSource)e.UserState;
+                if (_mailLog.ContainsKey(taskSource.Task.Id))
                 {
-                    _mailLog[taskId].Status = e.Error != null ? MailSendStatus.SUCCESSED : MailSendStatus.FAILED;
-                    if (_mailLog[taskId].Status == MailSendStatus.FAILED)
+                    _mailLog[taskSource.Task.Id].Status = e.Error != null ? MailSendStatus.SUCCESSED : MailSendStatus.FAILED;
+                    if (_mailLog[taskSource.Task.Id].Status == MailSendStatus.FAILED)
                     {
-                        _mailLog[taskId].ErrorCount += 1;
+                        _mailLog[taskSource.Task.Id].ErrorCount += 1;
                     }
                 }
             }
@@ -448,12 +462,24 @@ namespace FormSendMail
         {
             if (_mailLog.Count > 0)
             {
-                _context.MailLogs.AddRange(_mailLog.Values);
+                ///Xử lý nếu gửi thành công nhưng là gửi lại lần 2 trong ngày thì không insert nữa
+                DateTime dataDate = dpkDataDate.Value.Date;
+
+                List<MailLog> insertable = new List<MailLog>();
+                foreach (var log in _mailLog)
+                {
+                    if (!_context.MailLogs.Any(l => l.DataDate == log.Value.DataDate && l.UserId == log.Value.UserId))
+                    {
+                        insertable.Add(log.Value);
+                    }
+                }
+
+                _context.MailLogs.AddRange(insertable);
                 _context.SaveChanges();
+                _mailLog.Clear();
                 frmViewMailLog frmMailLog = new frmViewMailLog(_context, _configuration);
                 frmMailLog.Ids = _mailLog.Values.Select(x => x.Id);
                 frmMailLog.Show();
-
             }
             string message = _message.ToString();
             if (!string.IsNullOrWhiteSpace(message))
