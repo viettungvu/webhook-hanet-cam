@@ -57,7 +57,7 @@ namespace ToolInsertCheckin
         {
             DateTime authDate = dpkAuthDate.Value;
             addControlText(txtTerminal, string.Format("Starting worker"));
-            process(authDate);
+            process(authDate, _refreshWorker);
             addControlText(txtTerminal, string.Format("Completed"));
         }
 
@@ -153,6 +153,7 @@ namespace ToolInsertCheckin
             {
                 this.prgBar.Invoke(() =>
                 {
+                    this.prgBar.Value = 0;
                     this.prgBar.Minimum = 0;
                     this.prgBar.Maximum = max;
                     this.prgBar.Step = 1;
@@ -160,6 +161,7 @@ namespace ToolInsertCheckin
             }
             else
             {
+                this.prgBar.Value = 0;
                 this.prgBar.Minimum = 0;
                 this.prgBar.Maximum = max;
                 this.prgBar.Step = 1;
@@ -262,7 +264,7 @@ namespace ToolInsertCheckin
 
                 for (int i = 0; i < totalAttendances; i++)
                 {
-                    setControlText(lblTotal, string.Format("Processing {0}/{1}", success, totalAttendances));
+                    setControlText(lblTotal, string.Format("Processing {0}/{1}", i + 1, totalAttendances));
                     int rows = _appContext.Hrm.Database.ExecuteSqlInterpolated($"EXEC {Infra.Shared.StoreProcedure.Ins_H0_EmployeeTimeBillByUserIdAndTime} @UserId={attendances[i].UserID},@InputTime={attendances[i].AuthDate},@Machine={attendances[i].DeviceName}");
 
                     addControlText(txtTerminal, string.Format("User with id {0} has been inserted", attendances[i].UserID));
@@ -270,12 +272,12 @@ namespace ToolInsertCheckin
                     attendances[i].Flag = 1;
                     if (worker != null)
                     {
-                        _autoWorker.ReportProgress(i + 1);
+                        worker.ReportProgress(i + 1);
                     }
                     _appContext.Webcam.SaveChanges();
                     Thread.Sleep(5000);
                 }
-                setControlText(lblLastRun, string.Format("Last run: {0}", DateTime.UtcNow.ToShortTimeString()));
+                setControlText(lblLastRun, string.Format("Last run: {0}", DateTime.Now.ToShortTimeString()));
             }
             catch (Exception)
             {

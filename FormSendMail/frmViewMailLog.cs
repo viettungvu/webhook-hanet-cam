@@ -53,14 +53,13 @@ namespace FormSendMail
         {
             if (Ids != null && Ids.Count() > 0)
             {
-
-                _logs = _context.MailLogs.Where(x => Ids.Contains(x.Id) && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG);
+                _logs = _context.MailLogs.Where(x => Ids.Contains(x.Id) && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG).ToList();
                 setDataToGrid(_logs);
                 activeBtnResend(_logs.Count() > 0);
             }
             else if (DataDate.HasValue)
             {
-                _logs = _context.MailLogs.Where(x => x.DataDate == DataDate.Value && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG);
+                _logs = _context.MailLogs.Where(x => x.DataDate == DataDate.Value && x.ErrorCount <= Constants.MAX_ERROR_MAIL_LOG).ToList();
                 setDataToGrid(_logs);
                 activeBtnResend(_logs.Count() > 0);
             }

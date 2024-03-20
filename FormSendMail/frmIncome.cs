@@ -434,7 +434,7 @@ namespace FormSendMail
                 TaskCompletionSource taskSource = (TaskCompletionSource)e.UserState;
                 if (_mailLog.ContainsKey(taskSource.Task.Id))
                 {
-                    _mailLog[taskSource.Task.Id].Status = e.Error != null ? MailSendStatus.SUCCESSED : MailSendStatus.FAILED;
+                    _mailLog[taskSource.Task.Id].Status = e.Error == null ? MailSendStatus.SUCCESSED : MailSendStatus.FAILED;
                     if (_mailLog[taskSource.Task.Id].Status == MailSendStatus.FAILED)
                     {
                         _mailLog[taskSource.Task.Id].ErrorCount += 1;
@@ -476,10 +476,10 @@ namespace FormSendMail
 
                 _context.MailLogs.AddRange(insertable);
                 _context.SaveChanges();
-                _mailLog.Clear();
                 frmViewMailLog frmMailLog = new frmViewMailLog(_context, _configuration);
                 frmMailLog.Ids = _mailLog.Values.Select(x => x.Id);
                 frmMailLog.Show();
+                _mailLog.Clear();
             }
             string message = _message.ToString();
             if (!string.IsNullOrWhiteSpace(message))

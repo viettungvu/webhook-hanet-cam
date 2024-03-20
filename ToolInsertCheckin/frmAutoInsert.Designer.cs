@@ -183,11 +183,11 @@
             // 
             // txtTerminal
             // 
-            txtTerminal.BackColor = SystemColors.WindowText;
+            txtTerminal.BackColor = SystemColors.Window;
             txtTerminal.BorderStyle = BorderStyle.FixedSingle;
             txtTerminal.Dock = DockStyle.Fill;
             txtTerminal.Enabled = false;
-            txtTerminal.ForeColor = Color.White;
+            txtTerminal.ForeColor = Color.Black;
             txtTerminal.Location = new Point(3, 391);
             txtTerminal.Name = "txtTerminal";
             txtTerminal.Size = new Size(986, 269);
