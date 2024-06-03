@@ -38,6 +38,8 @@ namespace ToolInsertCheckin
                 WorkerReportsProgress = true,
                 WorkerSupportsCancellation = true
             };
+            //2024/03/06: reset giá trị progressBar
+            resetProgessbar();
             _refreshWorker.DoWork += onRefreshWorkerRun;
             _refreshWorker.RunWorkerCompleted += onRefreshWorkerCompleted;
             _refreshWorker.ProgressChanged += onRefreshWorkerProcessChanged;
@@ -58,7 +60,8 @@ namespace ToolInsertCheckin
             DateTime authDate = dpkAuthDate.Value;
             addControlText(txtTerminal, string.Format("Starting worker"));
             process(authDate, _refreshWorker);
-            addControlText(txtTerminal, string.Format("Completed"));
+            resetProgessbar();
+            addControlText(txtTerminal, string.Format("Completed\n"));
         }
 
         private void initAutoWorker()
@@ -84,7 +87,8 @@ namespace ToolInsertCheckin
         {
 
             int timeout = getInterval();
-            DateTime authDate = dpkAuthDate.Value;
+            //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
+            DateTime authDate = DateTime.UtcNow;
             while (true)
             {
                 try
@@ -147,13 +151,13 @@ namespace ToolInsertCheckin
         {
             this.dpkAuthDate.Enabled = !_isRunning;
         }
-        private void setProgressSetting(int max = 100)
+        private void setProgressSetting(int max = 100, int success = 0)
         {
             if (this.prgBar.InvokeRequired)
             {
                 this.prgBar.Invoke(() =>
                 {
-                    this.prgBar.Value = 0;
+                    this.prgBar.Value = success;
                     this.prgBar.Minimum = 0;
                     this.prgBar.Maximum = max;
                     this.prgBar.Step = 1;
@@ -161,7 +165,7 @@ namespace ToolInsertCheckin
             }
             else
             {
-                this.prgBar.Value = 0;
+                this.prgBar.Value = success;
                 this.prgBar.Minimum = 0;
                 this.prgBar.Maximum = max;
                 this.prgBar.Step = 1;
@@ -257,27 +261,40 @@ namespace ToolInsertCheckin
                 Attendance[] attendances = _appContext.Webcam.Attendance.FromSqlRaw<Attendance>(sqlRaw, pDataDate, pFlag).ToArray();
                 setDataToGrid(attendances);
                 int totalAttendances = attendances.Length;
-                setProgressSetting(totalAttendances);
+                setProgressSetting(totalAttendances,0);
                 addControlText(txtTerminal, string.Format("Found {0} records", totalAttendances));
 
                 int success = 0;
 
                 for (int i = 0; i < totalAttendances; i++)
                 {
-                    setControlText(lblTotal, string.Format("Processing {0}/{1}", i + 1, totalAttendances));
-                    int rows = _appContext.Hrm.Database.ExecuteSqlInterpolated($"EXEC {Infra.Shared.StoreProcedure.Ins_H0_EmployeeTimeBillByUserIdAndTime} @UserId={attendances[i].UserID},@InputTime={attendances[i].AuthDate},@Machine={attendances[i].DeviceName}");
-
-                    addControlText(txtTerminal, string.Format("User with id {0} has been inserted", attendances[i].UserID));
-                    success += 1;
-                    attendances[i].Flag = 1;
-                    if (worker != null)
+                    //2024/03/06: thay đổi kiểm tra tự động insert
+                    if (_isRunning)
                     {
-                        worker.ReportProgress(i + 1);
+                        setControlText(lblTotal, string.Format("Processing {0}/{1}", i + 1, totalAttendances));
+                        int rows = _appContext.Hrm.Database.ExecuteSqlInterpolated($"EXEC {Infra.Shared.StoreProcedure.Ins_H0_EmployeeTimeBillByUserIdAndTime} @UserId={attendances[i].UserID},@InputTime={attendances[i].AuthDate},@Machine={attendances[i].DeviceName}");
+
+                        addControlText(txtTerminal, string.Format("User with id {0} has been inserted", attendances[i].UserID));
+                        success += 1;
+                        setProgressSetting(totalAttendances, success);
+
+                        attendances[i].Flag = 1;
+                        if (worker != null)
+                        {
+                            worker.ReportProgress(i + 1);
+                        }
+                        _appContext.Webcam.SaveChanges();
+                        Thread.Sleep(1000);
                     }
-                    _appContext.Webcam.SaveChanges();
-                    Thread.Sleep(5000);
+                    else
+                    {
+                        // 2024/03/06: nếu dừng thì set progress về 0, và dừng insertData
+                        setProgressSetting(totalAttendances, 0);
+                        setControlText(lblTotal, string.Format("Processing {0}/{1}", 0, totalAttendances));
+                        return;
+                    };
+                    setControlText(lblLastRun, string.Format("Last run: {0}", DateTime.Now.ToShortTimeString()));
                 }
-                setControlText(lblLastRun, string.Format("Last run: {0}", DateTime.Now.ToShortTimeString()));
             }
             catch (Exception)
             {
@@ -328,6 +345,7 @@ namespace ToolInsertCheckin
             if (_refreshWorker == null || (_refreshWorker != null && !_refreshWorker.IsBusy))
             {
                 initRefreshWorker();
+                
                 _refreshWorker.RunWorkerAsync();
             }
         }

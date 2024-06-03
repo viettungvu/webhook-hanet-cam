@@ -183,11 +183,15 @@
             // 
             // txtTerminal
             // 
-            txtTerminal.BackColor = SystemColors.Window;
+            //2024/03/06: thay đổi màu nền terminal
+            txtTerminal.BackColor = SystemColors.MenuText;
             txtTerminal.BorderStyle = BorderStyle.FixedSingle;
             txtTerminal.Dock = DockStyle.Fill;
-            txtTerminal.Enabled = false;
-            txtTerminal.ForeColor = Color.Black;
+            //2024/03/06: chỉ cho phép đọc trên terminal
+            txtTerminal.Enabled = true;
+            txtTerminal.ReadOnly = true;
+            //2024/03/06: thay đổi màu chữ cho terminal
+            txtTerminal.ForeColor = Color.White;
             txtTerminal.Location = new Point(3, 391);
             txtTerminal.Name = "txtTerminal";
             txtTerminal.Size = new Size(986, 269);
