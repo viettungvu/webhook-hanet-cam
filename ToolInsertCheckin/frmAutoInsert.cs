@@ -61,7 +61,7 @@ namespace ToolInsertCheckin
         {
             //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
                 // thay đổi biến isRunning thành false khi chạy xong
-            DateTime authDate = dpkAuthDate.Value;
+            DateTime authDate = DateTime.UtcNow;
             addControlText(txtTerminal, string.Format("Starting worker"));
             process(authDate, _refreshWorker);
             _isRunning = !_isRunning;
@@ -92,7 +92,7 @@ namespace ToolInsertCheckin
 
             int timeout = getInterval();
             //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
-            DateTime authDate = dpkAuthDate.Value;
+            DateTime authDate = DateTime.UtcNow;
             while (true)
             {
                 try
