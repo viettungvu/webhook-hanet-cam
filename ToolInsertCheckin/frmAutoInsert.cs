@@ -60,10 +60,11 @@ namespace ToolInsertCheckin
         private void onRefreshWorkerRun(object sender, DoWorkEventArgs e)
         {
             //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
+                // thay đổi biến isRunning thành false khi chạy xong
             DateTime authDate = dpkAuthDate.Value;
             addControlText(txtTerminal, string.Format("Starting worker"));
             process(authDate, _refreshWorker);
-            resetProgessbar();
+            _isRunning = !_isRunning;
             addControlText(txtTerminal, string.Format("Completed\n"));
         }
 
@@ -311,10 +312,11 @@ namespace ToolInsertCheckin
 
         private void btnAuto_Click(object sender, EventArgs e)
         {
-            if (_isRunning)
+            //2024/04/06: thay đổi điều kiện chạy tự động insert dữ liệu
+            if (_isRunning && _autoWorker != null)
             {
                 DialogResult comfirmDialog = MessageBox.Show("Dữ liệu đang được insert vào database, bạn chắc chắn muốn dừng lại?", "Dừng tiến trình", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (comfirmDialog == DialogResult.Yes)
+                if (comfirmDialog == DialogResult.Yes )
                 {
                     _autoWorker.CancelAsync();
                     _autoWorker.Dispose();
@@ -358,6 +360,7 @@ namespace ToolInsertCheckin
                 {
                     initRefreshWorker();
                     _refreshWorker.RunWorkerAsync();
+                    
                 }
             }
         }
