@@ -29,20 +29,22 @@ namespace ToolInsertCheckin
         private BackgroundWorker _refreshWorker;
         private void initRefreshWorker()
         {
-            if (_refreshWorker != null && !_refreshWorker.IsBusy)
-            {
-                _refreshWorker.Dispose();
-            }
-            _refreshWorker = new BackgroundWorker()
-            {
-                WorkerReportsProgress = true,
-                WorkerSupportsCancellation = true
-            };
-            //2024/03/06: reset giá trị progressBar
-            resetProgessbar();
-            _refreshWorker.DoWork += onRefreshWorkerRun;
-            _refreshWorker.RunWorkerCompleted += onRefreshWorkerCompleted;
-            _refreshWorker.ProgressChanged += onRefreshWorkerProcessChanged;
+                if (_refreshWorker != null && !_refreshWorker.IsBusy)
+                {
+                    _refreshWorker.Dispose();
+                }
+                _refreshWorker = new BackgroundWorker()
+                {
+                    WorkerReportsProgress = true,
+                    WorkerSupportsCancellation = true
+                };
+
+                _refreshWorker.DoWork += onRefreshWorkerRun;
+                _refreshWorker.RunWorkerCompleted += onRefreshWorkerCompleted;
+                _refreshWorker.ProgressChanged += onRefreshWorkerProcessChanged;
+                //2024/03/06: reset giá trị progressBar
+                resetProgessbar();
+    
         }
 
         private void onRefreshWorkerProcessChanged(object sender, ProgressChangedEventArgs e)
@@ -57,6 +59,7 @@ namespace ToolInsertCheckin
 
         private void onRefreshWorkerRun(object sender, DoWorkEventArgs e)
         {
+            //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
             DateTime authDate = dpkAuthDate.Value;
             addControlText(txtTerminal, string.Format("Starting worker"));
             process(authDate, _refreshWorker);
@@ -88,7 +91,7 @@ namespace ToolInsertCheckin
 
             int timeout = getInterval();
             //2024/03/06: thay đổi giá trị authDate thành giá trị giờ hiện tại của máy tính.
-            DateTime authDate = DateTime.UtcNow;
+            DateTime authDate = dpkAuthDate.Value;
             while (true)
             {
                 try
@@ -290,7 +293,7 @@ namespace ToolInsertCheckin
                     {
                         // 2024/03/06: nếu dừng thì set progress về 0, và dừng insertData
                         setProgressSetting(totalAttendances, 0);
-                        setControlText(lblTotal, string.Format("Processing {0}/{1}", 0, totalAttendances));
+                        setControlText(lblTotal, string.Format("Processing {0}/{1}", 0, 0));
                         return;
                     };
                     setControlText(lblLastRun, string.Format("Last run: {0}", DateTime.Now.ToShortTimeString()));
@@ -342,11 +345,20 @@ namespace ToolInsertCheckin
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (_refreshWorker == null || (_refreshWorker != null && !_refreshWorker.IsBusy))
+            //2024/04/06:  thay đổi cách kiểm tra dữ liệu đang insert, 
+            if (_isRunning)
             {
-                initRefreshWorker();
-                
-                _refreshWorker.RunWorkerAsync();
+                _isRunning = false;
+                resetProgessbar() ;
+            }
+            else
+            {
+                _isRunning = true;
+                if (_refreshWorker == null || (_refreshWorker != null && !_refreshWorker.IsBusy))
+                {
+                    initRefreshWorker();
+                    _refreshWorker.RunWorkerAsync();
+                }
             }
         }
     }
